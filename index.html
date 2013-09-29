@@ -1,0 +1,45 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Trainer Companion</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Bootstrap -->
+        <link href="js/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+        <link href="http://bootswatch.com/cosmo/bootstrap.css" rel="stylesheet" media="screen">
+
+        <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+        <script src="js/libs/bootstrap/js/bootstrap.min.js"></script>
+        <script src="js/libs/angular.js" type="text/javascript"></script>
+        <script src='https://cdn.firebase.com/v0/firebase.js'></script>
+        <script src='https://cdn.firebase.com/libs/angularfire/0.3.0/angularfire.min.js'></script>
+        <script src="js/libs/ng-google-chart.js" type="text/javascript"></script>
+        <script type="application/javascript" src="js/App.js"></script>
+        <script type="application/javascript" src="js/utils.js"></script>
+    </head>
+    <body>
+        <div class="navbar">
+            <div class="navbar-inner navbar-fixed-top">
+                <a class="brand" href="#">motiv</a>
+                <ul class="nav">
+                    <li>
+                        <a href="#/">Home</a>
+                    </li>
+                    <li>
+                        <a href="#/dashboard">Heart Rate</a>
+                    </li>
+                    <li>
+                        <a href="#/reports">Diastolic Pressure</a>
+                    </li>
+                    <li>
+                        <a href="#/systolic">Systolic Pressure</a>
+                    </li>
+                    <li>
+                        <a href="#/individual">Team members</a>
+                    </li>
+                </ul>
+            </div>
+            <div ng-view></div>
+        </div>
+        <img src="motiv_logo.png" style="position: absolute; right:0px; bottom:0px"/>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<div ng-controller="rController">
+
+    <div class="row-fluid">
+        <div class="span1"></div>
+        <div class="span10">
+            <div class="accordion" id="accordion2">
+                <div class="accordion-group" ng-repeat="user in users">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_{{user.name}}"> {{user.name}} </a>
+                    </div>
+                    <div id="collapse_{{user.name}}" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <table class="table table-bordered">
+                                <tr class="success">
+                                    <th>Heart Rate</th>
+                                    <th>Systolic Pressure</th>
+                                    <th>Diastolic Pressure</th>
+                                </tr>
+                                <tr class="success" ng-repeat="reading in user.Readings">
+                                    <td>{{reading.heartrate}}</td>
+                                    <td>{{reading.systolic_pressure}}</td>
+                                    <td>{{reading.diastolic_presure}}</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span1"></div>
+    </div>
+
+</div>
